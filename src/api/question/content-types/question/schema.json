@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "questions",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "question": {
+      "type": "text"
+    },
+    "hint": {
+      "type": "string"
+    },
+    "answers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::answer.answer"
+    }
+  }
+}
