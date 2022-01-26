@@ -4,6 +4,12 @@
  * location router.
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
-
-module.exports = createCoreRouter('api::location.location');
+module.exports = {
+  routes: [
+    {
+      "method": "GET",
+      "path": "/location/:code",
+      "handler": "location.findByCode"
+    },
+  ],
+};
